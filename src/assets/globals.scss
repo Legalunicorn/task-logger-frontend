@@ -1,0 +1,151 @@
+:root {
+    font-family: Alata,Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    // color: rgba(255, 255, 255, 0.87);
+    // background-color: #242424;
+
+    --color-grey: rgb(218, 216, 216);
+    --color-text: rgb(6, 4, 25);
+    --color-bg: rgb(247, 246, 253);
+    --color-primary: rgb(76, 60, 221);
+    --color-acc: rgb(207, 103, 228);
+    --color-sec: rgb(205, 138, 234);
+
+
+    --color-sec-80: rgba(var(--color-sec),0.8);
+    --color-sec-60: rgba(var(--color-sec),0.6);
+    --color-sec-40: rgba(var(--color-sec),0.4);
+
+
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Alata;
+    src: url("../assets/fonts/Alata-Regular.ttf");
+}
+
+button{
+    color: var(--color-text);
+    background-color: var(--color-grey);
+    border: 1px solid var(--color-text);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    cursor:pointer;
+}
+
+main{
+    min-height: 90vh;
+    padding: 1rem 1.5rem;
+}
+
+input{
+    font-size: 1rem;
+    font-family: Alata,Inter;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--color-text);
+    border-radius: 0.75rem;
+    background-color: #fff;
+
+
+    &:focus{
+        outline: 0;
+
+        
+    }
+}
+
+select{
+    font-size:1rem;
+    font-family: Alata,Inter;
+    padding: 0.25rem 0.5rem;
+    border:1px solid var(--color-text);
+    border-radius: 0.25rem;
+    background-color: #fff;
+}
+
+.submit{
+    border:0;
+    width:fit-content;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    padding: 0.5rem 0.75rem;
+
+    &:hover{
+        background-color: #2d0a66;
+    }
+}
+// button {
+//     border-radius: 8px;
+//     border: 1px solid transparent;
+//     padding: 0.6em 1.2em;
+//     font-size: 1em;
+//     font-weight: 500;
+//     font-family: inherit;
+//     background-color: #1a1a1a;
+//     cursor: pointer;
+//     transition: border-color 0.25s;
+//   }
+
+
+
+  
+//   a {
+//     font-weight: 500;
+//     color: #646cff;
+//     text-decoration: inherit;
+//   }
+//   a:hover {
+//     color: #535bf2;
+//   }
+  
+//   body {
+//     margin: 0;
+//     display: flex;
+//     place-items: center;
+//     min-width: 320px;
+//     min-height: 100vh;
+//   }
+  
+//   h1 {
+//     font-size: 3.2em;
+//     line-height: 1.1;
+//   }
+  
+//   button {
+//     border-radius: 8px;
+//     border: 1px solid transparent;
+//     padding: 0.6em 1.2em;
+//     font-size: 1em;
+//     font-weight: 500;
+//     font-family: inherit;
+//     background-color: #1a1a1a;
+//     cursor: pointer;
+//     transition: border-color 0.25s;
+//   }
+//   button:hover {
+//     border-color: #646cff;
+//   }
+//   button:focus,
+//   button:focus-visible {
+//     outline: 4px auto -webkit-focus-ring-color;
+//   }
