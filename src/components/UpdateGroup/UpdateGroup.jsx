@@ -1,4 +1,4 @@
-import { Form, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { Form, useNavigate, useParams, useSearchParams,Link} from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { useEffect } from "react";
 
@@ -48,6 +48,7 @@ export default function UpdateGroup(){
         <main className="create_task_page">
             <h2>Create new group</h2>
             <Form onSubmit={handleSubmit}>
+                <Link to={"/"} >Back to Home page</Link>
                 <input 
                     name="name" 
                     required type="text" 

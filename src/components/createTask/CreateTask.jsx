@@ -1,7 +1,7 @@
-import { Form, useNavigate, useSearchParams } from "react-router-dom";
+import { Form, useNavigate, useSearchParams,Link } from "react-router-dom";
 import "./createTask.scss"
 import { useFetch } from "../../hooks/useFetch";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 const CreateTask = () => {
     const navigate = useNavigate();
     const [searchParams]= useSearchParams();
@@ -42,6 +42,7 @@ const CreateTask = () => {
         <main className="create_task_page">
             <h2>Create Task Form</h2>
             <Form onSubmit={handleSubmit}>
+            <Link to={"/"} >Back to Home page</Link>
                 <input 
                     id="sksk"
                     required 

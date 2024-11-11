@@ -1,4 +1,4 @@
-import { Form, useNavigate } from "react-router-dom";
+import { Form, useNavigate,Link } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { useEffect } from "react";
 
@@ -43,6 +43,7 @@ export default function CreateGroup(){
         <main className="create_task_page">
             <h2>Create new group</h2>
             <Form onSubmit={handleSubmit}>
+                <Link to={"/"} >Back to Home page</Link>
                 <input name="name" required type="text" placeholder="Name of group" />
                 {error && <p className="error-msg">{error}</p>}
                 <button disabled={submitLoading}className="submit">Submit</button>
