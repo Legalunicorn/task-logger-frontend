@@ -40,6 +40,12 @@
         opacity: 0.8;
         cursor:pointer;
         text-decoration: underline;
+
+        &.null{
+            text-decoration: none;
+            opacity: 0.4;
+            cursor:default;
+        }
     }
 
     .task-options{

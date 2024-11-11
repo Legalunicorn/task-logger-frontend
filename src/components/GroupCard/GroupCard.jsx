@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./groupCard.scss"
-const GroupCard = ({group}) => {
+const GroupCard = ({group,handleDelete}) => {
 
     //id
     //name
@@ -11,14 +11,18 @@ const GroupCard = ({group}) => {
         <article className="group-card">
             <a
                 Link={`/groups/${group.id}`}
-                onClick={()=>navigate(`/groups/${group.id}`)}
+                onClick={()=>navigate(`/groups/${group.id}?name=${group.name}`)}
             >{group.name}
             </a>
             <span className="group-options">
-            <button>
+            <button
+                onClick={()=>handleDelete(group.id)}
+            >
                 delete
             </button>
-            <button>
+            <button
+                onClick={()=>navigate(`/groups/update/${group.id}?name=${group.name}`)}
+            >
                 update
             </button>
 

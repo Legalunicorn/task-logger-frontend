@@ -6,6 +6,7 @@ import CreateGroup from "./components/createGroup/CreateGroup"
 import Group from "./components/group/Group";
 import UpdateTask from "./components/updateTask/UpdateTask";
 import BrowseGroups from "./components/browseGroups/BrowseGroups";
+import UpdateGroup from "./components/UpdateGroup/UpdateGroup";
 
 
 const router = createBrowserRouter([
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
                         },
                         {
                             path:"update/:groupId",
-                            element:"update"
+                            element:<UpdateGroup/>
                         },
                         {
                             path:":groupId",

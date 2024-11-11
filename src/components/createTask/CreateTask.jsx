@@ -1,9 +1,11 @@
-import { Form, useNavigate } from "react-router-dom";
+import { Form, useNavigate, useSearchParams } from "react-router-dom";
 import "./createTask.scss"
 import { useFetch } from "../../hooks/useFetch";
 import { useEffect, useRef } from "react";
 const CreateTask = () => {
     const navigate = useNavigate();
+    const [searchParams]= useSearchParams();
+    const groupId = Number(searchParams.get("group_id")); //Optional
     const {data,loading,error,myFetch} = useFetch();
     const {loading:submitLoading,error:submitError,myFetch:submitFetch} = useFetch();
     useEffect(()=>{        
@@ -52,7 +54,10 @@ const CreateTask = () => {
                 <select name="group" id="">
                     <option value="">null</option>
                     {data && data.length>0 && data.map(group=>(
-                        <option value={group.id}>{group.name}</option>
+                        group.id===groupId
+                        ?<option selected value={group.id}>{group.name}</option>
+                        :<option value={group.id}>{group.name}</option>
+                        
                     ))}
                 </select>
                 {error &&

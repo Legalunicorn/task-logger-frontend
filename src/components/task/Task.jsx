@@ -13,7 +13,7 @@ const Task = ({
 
    const handleClick=(e)=>{
         if (e.target.value!=="null"){
-            navigate(`/groups/${task.taskGroup.id}`)
+            navigate(`/groups/${task.taskGroup.id}?name=${task.taskGroup.name}`)
         }
    }
 
@@ -24,12 +24,19 @@ const Task = ({
         <article className="task">
             <span>{formattedDate}</span>
             <p>{task.description}</p>
-            <span onClick={handleClick}className="task-group">
+            {task.taskGroup && task.taskGroup.name
+                ?<span onClick={handleClick}className="task-group">{task.taskGroup.name}</span>
+                :<span onClick={handleClick}className="task-group null">null</span>
+                
+            }
+
+
+            {/* <span onClick={handleClick}className="task-group">
                 {task.taskGroup && task.taskGroup.name
                 ?task.taskGroup.name
                 : "null"
                 }
-            </span>
+            </span> */}
 
             <span className="task-options">
             <button

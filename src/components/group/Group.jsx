@@ -1,4 +1,4 @@
-import { useParams,Link } from "react-router-dom";
+import { useParams,Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import "./group.scss"
 import Task from "../task/Task";
@@ -6,7 +6,10 @@ import { useEffect } from "react";
 const Group = () => {
 
     const {groupId} = useParams();
+    const [searchParam] = useSearchParams();
+    const group_name = searchParam.get("name");
     console.log("group id is : ",groupId)
+    const navigate = useNavigate();
 
     const {
         data,
@@ -20,7 +23,7 @@ const Group = () => {
     },[])
 
     if (error||loading) return ("");
-    console.log(data);
+    console.log("heyY",data);
 
     
     return (
@@ -31,9 +34,9 @@ const Group = () => {
 
         <div id="wtf" className="home-page">
             <section>
-            <h2>{data.length>0 && data[0].taskGroup.name} logs:({data.length})</h2>
+            <h2>{group_name? group_name: data.length>0 &&data[0].taskGroup.name} logs:({data.length})</h2>
             <button className="new-task"
-                    onClick={()=>navigate("/tasks/new")}
+                    onClick={()=>navigate(`/tasks/new?group_id=${groupId}`)}
             >New </button>
             <Link to={"/"}>Home page</Link>
             </section>

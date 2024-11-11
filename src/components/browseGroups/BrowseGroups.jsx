@@ -8,6 +8,7 @@ const BrowseGroups = () => {
 
     const{
         data:groups,
+        setData,
         loading,
         error,
         myFetch:fetchGroups
@@ -16,6 +17,19 @@ const BrowseGroups = () => {
     useEffect(()=>{
         fetchGroups("/groups")//select all groups
     },[])
+
+    const handleDelete = async (groupId)=>{
+        const res = await fetch(`http://localhost:8080/groups/${groupId}`,{
+            mode:"cors",
+            method:"DELETE",
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+        if (res.ok){
+            setData(groups.filter(a=>a.id!==groupId))
+        }
+    }
 
 
     if (loading||error) return ("...");
@@ -34,7 +48,10 @@ const BrowseGroups = () => {
             </section>
             {groups && groups.length>0 &&
             groups.map(group=>(
-                <GroupCard group={group}/>
+                <GroupCard 
+                    group={group}
+                    handleDelete={handleDelete}
+                />
             ))}
         </main>
     );
