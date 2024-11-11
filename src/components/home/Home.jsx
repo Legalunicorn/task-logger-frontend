@@ -3,6 +3,7 @@ import { useFetch } from "../../hooks/useFetch";
 import Task from "../task/Task";
 import "./home.scss"
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 
 const Home = () => {
@@ -58,12 +59,17 @@ const Home = () => {
             {data && data.length>0 &&
                 <div className="tasks-container">
                     {data.map((task,idx)=>(
-
-                        <>
+     
+                        <React.Fragment key={task.id}>
+                            {idx==0 && <p className="date-seperator">{data[idx].dateCompleted}</p>}
                         <Task task={task} key={task.id}
                             handleDelete={handleDelete}
                         />
-                        </>
+                            {idx===0 || (((idx<data.length-1 && data[idx].dateCompleted!==data[idx+1].dateCompleted))) && 
+                            <p className="date-seperator">{data[idx].dateCompleted}</p>
+                            }
+                            
+                        </React.Fragment>
        
                     ))}
                 </div>

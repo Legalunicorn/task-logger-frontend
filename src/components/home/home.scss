@@ -34,6 +34,14 @@
 .tasks-container{
     width: 100%;
     max-width: 100%;
+
+    .date-seperator{
+        color:red;
+        margin: 1.5rem 0 0.5rem 0;
+        // border:1px solid red;
+        text-align: center;
+        color: var(--color-primary);
+    }
 }
 
 .new-task{

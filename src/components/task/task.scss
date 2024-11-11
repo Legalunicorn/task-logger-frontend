@@ -31,7 +31,7 @@
         text-overflow: ellipsis;
     }
     .task-group{
-        // width: 10%;
+        // width: 15%;
         margin-right: 1rem;
         white-space: nowrap;
         overflow: hidden;
@@ -40,7 +40,6 @@
         font-style: italic;
         opacity: 0.8;
         cursor:pointer;
-        // text-decoration: underline;
         color: var(--color-primary);
         border: 1px solid var(--color-primary);
         padding: 0.25rem 0.5rem;
@@ -95,4 +94,10 @@
         }
     }
 
+}
+
+@media only screen and (max-width:600px){
+    .task > span:first-child{
+        display: none;
+    }
 }

@@ -1,5 +1,6 @@
 :root {
     font-family: Alata,Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
   
@@ -56,6 +57,9 @@ button{
 main{
     min-height: 90vh;
     padding: 1rem 1.5rem;
+    max-width: 1580px;
+    margin-left: auto;
+    margin-right:auto;
 }
 
 input{
