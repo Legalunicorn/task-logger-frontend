@@ -9,7 +9,7 @@ const UpdateTask = () => {
     console.log(query_date_completed,"---------")
     const query_description = searchParams.get("description");
     const query_group_id = Number(searchParams.get("group_id"));
-    console.log(query_group_id,"hahha")
+    console.log(query_description,"hahha")
 
 
     const navigate = useNavigate();

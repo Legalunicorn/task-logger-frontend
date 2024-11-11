@@ -38,7 +38,8 @@ const Group = () => {
             <button className="new-task"
                     onClick={()=>navigate(`/tasks/new?group_id=${groupId}`)}
             >New </button>
-            <Link to={"/"}>Home page</Link>
+            <Link to={"/"}>View Tasks</Link>
+            <Link to={"/groups"}>View Groups</Link>
             </section>
     
             {data && data.length>0 &&

@@ -11,7 +11,7 @@ const GroupCard = ({group,handleDelete}) => {
         <article className="group-card">
             <a
                 Link={`/groups/${group.id}`}
-                onClick={()=>navigate(`/groups/${group.id}?name=${group.name}`)}
+                onClick={()=>navigate(`/groups/${group.id}?name=${encodeURIComponent(group.name)}`)}
             >{group.name}
             </a>
             <span className="group-options">
@@ -21,7 +21,7 @@ const GroupCard = ({group,handleDelete}) => {
                 delete
             </button>
             <button
-                onClick={()=>navigate(`/groups/update/${group.id}?name=${group.name}`)}
+                onClick={()=>navigate(`/groups/update/${group.id}?name=${encodeURIComponent(group.name)}`)}
             >
                 update
             </button>

@@ -43,7 +43,7 @@ const Task = ({
                 onClick={()=>handleDelete(task.id)}
             >delete</button>
             <button
-                onClick={()=>navigate(`/tasks/update/${task.id}?date_completed=${task.dateCompleted}&description=${task.description}&group_id=${task.taskGroup? task.taskGroup.id : null}`)}
+                onClick={()=>navigate(`/tasks/update/${task.id}?date_completed=${task.dateCompleted}&description=${encodeURIComponent(task.description)}&group_id=${task.taskGroup? task.taskGroup.id : null}`)}
             >update</button>
             </span>
 

@@ -57,10 +57,14 @@ const Home = () => {
  
             {data && data.length>0 &&
                 <div className="tasks-container">
-                    {data.map(task=>(
+                    {data.map((task,idx)=>(
+
+                        <>
                         <Task task={task} key={task.id}
                             handleDelete={handleDelete}
                         />
+                        </>
+       
                     ))}
                 </div>
             }

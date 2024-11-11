@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="footer-content">
                 <section>
                     <p>About</p>
-                    <p>This is my first project with a spring based API. Its a simple project to test my understanding of Hibernate mappings between entities</p>
+                    <p>This is my first project with a spring based API. Its a purpose to put my learning of Hibernate mappings between entities into practice.</p>
                 </section>
                 <section>
                     <p>Source code</p>
