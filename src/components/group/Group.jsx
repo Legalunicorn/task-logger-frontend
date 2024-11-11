@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import "./group.scss"
 import Task from "../task/Task";
@@ -35,6 +35,7 @@ const Group = () => {
             <button className="new-task"
                     onClick={()=>navigate("/tasks/new")}
             >New </button>
+            <Link to={"/"}>Home page</Link>
             </section>
     
             {data && data.length>0 &&

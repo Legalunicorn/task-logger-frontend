@@ -5,6 +5,7 @@ import CreateTask from "./components/createTask/CreateTask";
 import CreateGroup from "./components/createGroup/CreateGroup"
 import Group from "./components/group/Group";
 import UpdateTask from "./components/updateTask/UpdateTask";
+import BrowseGroups from "./components/browseGroups/BrowseGroups";
 
 
 const router = createBrowserRouter([
@@ -35,7 +36,8 @@ const router = createBrowserRouter([
                     path:"groups",
                     children:[
                         {
-                            path:"all"
+                            path:"",
+                            element:<BrowseGroups/>
                         },
                         {
                             path:"new",

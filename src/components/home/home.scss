@@ -8,11 +8,12 @@
     min-height: 90vh;
     section{
         // gap:0;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         display: flex;
         align-items: center;
         width: 100%;
         gap: 2rem;
+        border:1px solid red;
         h2{
             width: fit-content !important;
             margin:0;

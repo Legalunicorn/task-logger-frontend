@@ -1,4 +1,4 @@
-import { Form, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { Form, useNavigate, useParams, useSearchParams,Link } from "react-router-dom";
 import "../createTask/createTask.scss"
 import { useFetch } from "../../hooks/useFetch";
 import { useEffect } from "react";
@@ -47,6 +47,8 @@ const UpdateTask = () => {
         <main className="create_task_page">
             <h2>Update Task Form</h2>
             <Form onSubmit={handleSubmit}>
+                
+            <Link to={"/"} >Back to Home page</Link>
                 <input 
                     id="sksk"
                     required 

@@ -1,49 +1,23 @@
-
-.task{
+.group-card{
     margin-bottom: 0.5rem;    
     background-color: var(--color-grey);
-    background-color: #ffffff;
+    background-color: #fff;
     display:flex;
-    border-radius: 0.25rem 0.5rem;
-
+    border-radius: 1rem;
     font-family: Arial;
     align-items: center;
     padding: 0.75rem 1rem;
     transition: 0.2s ease-in-out;
-    
-    &:hover{
-        background-color: #ffffff;
-        transform: translate(5px);
-        box-shadow: 6px 5px 0 var(--color-sec);
-    }
 
-    > span:first-child{
-        opacity: 0.8;
-        margin-right: 2rem;
-        white-space: nowrap;
-    }
-    > p{
-        // flex: 1;
-        max-width: 50%;
-        text-align: left;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .task-group{
-        width: 10%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin-left: auto;
-        font-style: italic;
-        opacity: 0.8;
-        cursor:pointer;
+    > a:first-child{
         text-decoration: underline;
+        cursor:pointer
     }
 
-    .task-options{
-        // margin-left: auto;
+
+
+    .group-options{
+        margin-left: auto;
         display: flex;
         gap: 0.5rem;
         button{
@@ -77,10 +51,4 @@
             }
         }
     }
-    
-    // > span:l
-
-    // &:hover{
-    //     transform:translateX(0.25rem);
-    // }
 }

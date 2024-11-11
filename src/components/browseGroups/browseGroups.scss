@@ -1,0 +1,39 @@
+.browse-groups-page{
+    section{
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+        border:1px solid red;
+        h2{
+            width: fit-content !important;
+            margin:0;
+            padding:0;
+            width:100%;
+        }
+        button{
+            margin: 0;
+
+        }
+        >a:last-child{
+            text-decoration: underline;
+            cursor:pointer;
+        }
+
+
+    }
+    
+    .new-group{
+        border:0;
+        font-family: Alata,Inter,Arial;
+        background-color: var(--color-primary);
+        color: var(--color-bg);
+        box-shadow: 4px 3px 0 var(--color-acc);
+    
+        &:hover{
+            background-color:var(--color-text);
+            color:var(--color-bg);
+        }
+    }
+}
