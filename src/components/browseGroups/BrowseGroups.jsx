@@ -20,7 +20,7 @@ const BrowseGroups = () => {
     },[])
 
     const handleDelete = async (groupId)=>{
-        const res = await fetch(API_URL+`/${groupId}`,{
+        const res = await fetch(API_URL+`/groups/${groupId}`,{
             mode:"cors",
             method:"DELETE",
             headers:{

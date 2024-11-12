@@ -7,7 +7,7 @@ const Task = ({
     task,
     handleDelete
 }) => {
-    console.log("===>",task.dateCompleted);
+    // console.log("===>",task.dateCompleted);
    const formattedDate = format(new Date(task.dateCompleted),"d MMM yyyy")
    const navigate = useNavigate();
 

@@ -6,10 +6,8 @@ const UpdateTask = () => {
     const [searchParams,setSearchParams] = useSearchParams();
     const {taskId} = useParams();
     const query_date_completed = searchParams.get("date_completed");
-    console.log(query_date_completed,"---------")
     const query_description = searchParams.get("description");
     const query_group_id = Number(searchParams.get("group_id"));
-    console.log(query_description,"hahha")
 
 
     const navigate = useNavigate();

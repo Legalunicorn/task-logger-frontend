@@ -11,8 +11,8 @@ const API_URL = import.meta.env.VITE_API_URL;
 const Home = () => {
     const { data, setData, loading, error, myFetch } = useFetch();
     const navigate = useNavigate();
-    console.log("IN HOME")
-    console.log("the API URL IS : ",API_URL);
+    // console.log("IN HOME")
+    // console.log("the API URL IS : ",API_URL);
 
     useEffect(() => {
         myFetch("/tasks")
@@ -24,7 +24,7 @@ const Home = () => {
     // if (data) console.log(data);
 
     const handleDelete = async (taskId) => {
-        const res = await fetch(API_URL+`/${taskId}`, {
+        const res = await fetch(API_URL+`/tasks/${taskId}`, {
             mode: "cors",
             method: "DELETE",
             headers: {
@@ -35,7 +35,7 @@ const Home = () => {
             setData(data.filter(a => a.id !== taskId))
         }
     }
-    console.log("::", data);
+    // console.log("::", data);
 
 
 

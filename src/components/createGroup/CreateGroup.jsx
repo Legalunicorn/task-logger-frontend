@@ -17,11 +17,11 @@ export default function CreateGroup(){
     const handleSubmit= async (e)=>{
         e.preventDefault();
         const name = e.target.name.value;
-        console.log(data);
+        // console.log(data);
         data.map(group=>{
             if (group.name===name){
-                console.log("in use")
-                setError("Name already in use.")
+                // console.log("in use")
+                // setError("Name already in use.")
             }
         })
         const success = await submitFetch("/groups",{
@@ -31,8 +31,8 @@ export default function CreateGroup(){
                 color:"blank"
             })
         })
-        console.log("submitted group")
-        console.log(submitError)
+        // console.log("submitted group")
+        // console.log(submitError)
 
         if (success){
             navigate("/")

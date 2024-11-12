@@ -8,7 +8,7 @@ const Group = () => {
     const {groupId} = useParams();
     const [searchParam] = useSearchParams();
     const group_name = searchParam.get("name");
-    console.log("group id is : ",groupId)
+    // console.log("group id is : ",groupId)
     const navigate = useNavigate();
 
     const {
@@ -23,7 +23,7 @@ const Group = () => {
     },[])
 
     if (error||loading) return ("");
-    console.log("heyY",data);
+    // console.log("heyY",data);
 
     
     return (

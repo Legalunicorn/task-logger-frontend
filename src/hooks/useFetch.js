@@ -28,14 +28,14 @@ export function useFetch(){
 
             const json = await response.json();
             
-            console.log("response is : ",response);
+            // console.log("response is : ",response);
             if (!response.ok){
                 console.log("AN ERROR HAS OCCURED!!!")
                 setLoading(false);
                 setError("An error occured")
                 return false;
             } else{
-                console.log("no issue what so ever!")
+                // console.log("no issue what so ever!")
                 setLoading(false);
                 setData(json)
                 return true
