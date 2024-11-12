@@ -12,6 +12,7 @@ const Home = () => {
     const { data, setData, loading, error, myFetch } = useFetch();
     const navigate = useNavigate();
     console.log("IN HOME")
+    console.log("the API URL IS : ",API_URL);
 
     useEffect(() => {
         myFetch("/tasks")
