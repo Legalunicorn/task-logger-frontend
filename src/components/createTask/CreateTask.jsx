@@ -34,7 +34,8 @@ const CreateTask = () => {
             })
         })
         if (!submitError){
-            navigate("/")
+            if (groupId) navigate(`/groups/${groupId}`)
+            else navigate("/")
         }
     }
 

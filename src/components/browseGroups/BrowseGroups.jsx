@@ -3,6 +3,7 @@ import { useFetch } from "../../hooks/useFetch";
 import "./browseGroups.scss"
 import GroupCard from "../GroupCard/GroupCard";
 import { useNavigate } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_URL;
 const BrowseGroups = () => {
     const navigate = useNavigate();
 
@@ -19,7 +20,7 @@ const BrowseGroups = () => {
     },[])
 
     const handleDelete = async (groupId)=>{
-        const res = await fetch(`http://localhost:8080/groups/${groupId}`,{
+        const res = await fetch(API_URL+`/${groupId}`,{
             mode:"cors",
             method:"DELETE",
             headers:{

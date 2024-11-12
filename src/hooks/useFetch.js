@@ -5,10 +5,10 @@ i could sipmly just do a utility function but okay
 */
 
 import { useState } from "react";
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 export function useFetch(){
-    const API_URL ="http://localhost:8080"
     const [loading,setLoading] = useState(false);
     const [error,setError] = useState("");
     const [data,setData] = useState({});
